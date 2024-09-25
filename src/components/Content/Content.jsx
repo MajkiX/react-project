@@ -5,6 +5,7 @@ import { Navigate, Route, Routes } from 'react-router';
 import { StoreContext } from '../../store/StoreProvider';
 
 import Courses from '../Courses/Courses';
+import UserCourses from '../UserCourses/UserCourses';
 
 const style = bemCssModules(ContentStyles)
 
@@ -21,7 +22,7 @@ const Content = () => {
     <main className={style()}>
       <Routes>
         <Route path='/' element={<Courses />} />
-        {isUserLogged && <Route path='/my-courses' element={<p>Moje kursy</p>} />}
+        {isUserLogged && <Route path='/my-courses' element={<UserCourses />} />}
         {isAdmin && <Route path='/menage-courses' element={<p>Zarządzanie kursami</p>} />}
         <Route
           path="*"
