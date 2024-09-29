@@ -6,6 +6,7 @@ import { StoreContext } from '../../store/StoreProvider';
 
 import Courses from '../Courses/Courses';
 import UserCourses from '../UserCourses/UserCourses';
+import AdminPanel from '../AdminPanel/AdminPanel';
 
 const style = bemCssModules(ContentStyles)
 
@@ -23,7 +24,7 @@ const Content = () => {
       <Routes>
         <Route path='/' element={<Courses />} />
         {isUserLogged && <Route path='/my-courses' element={<UserCourses />} />}
-        {isAdmin && <Route path='/menage-courses' element={<p>Zarządzanie kursami</p>} />}
+        {isAdmin && <Route path='/menage-courses' element={<AdminPanel />} />}
         <Route
           path="*"
           element={<Navigate to="/" replace />}
