@@ -21,4 +21,15 @@
     align-self: center;
     flex-grow: 1;
   }
+
+  &__login-btn {
+    background-color: #bedfc8;
+    border: none;
+    border-left: 1px solid black;
+    padding: 0 20px;
+
+    &:hover {
+      background-color: #438756;
+    }
+  }
 }
